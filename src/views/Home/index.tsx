@@ -22,9 +22,9 @@ const Home: React.FC = () => {
   const { videos } = useFetchVideos();
 
   return (
-    <Box bg="gray.100" height="full">
-      <Container maxW="1024px">
-        <SimpleGrid columns={{ base: 2, md: 3, lg: 4 }} spacing="40px">
+    <Box height="full" overflowY="auto">
+      <Container maxW="container.lg">
+        <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} mt={4} spacing={8}>
           {videos && videos.map((video) => <VideoThumbnail video={video} />)}
         </SimpleGrid>
       </Container>

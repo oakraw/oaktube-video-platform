@@ -4,7 +4,7 @@ import React from "react";
 const Toolbar: React.FC = () => {
   return (
     <>
-      <Box h="81px" bg="red.200">
+      <Box h="81px" background="white">
         <Container maxW="container.lg" overflow="hidden" height="full">
           <Flex
             direction="row"

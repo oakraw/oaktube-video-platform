@@ -7,7 +7,6 @@ import {
   VStack,
   Code,
   Grid,
-  theme,
   Flex,
 } from "@chakra-ui/react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
@@ -16,13 +15,14 @@ import { Logo } from "./Logo";
 import NotFound from "./views/NotFound";
 import Home from "./views/Home";
 import Toolbar from "./components/Toolbar";
+import theme from "./theme";
 
 export const App = () => (
   <Router>
-    <ChakraProvider>
+    <ChakraProvider theme={theme}>
       <Flex flexDirection="column" h="100vh">
         <Toolbar />
-        <Box h="full" overflow="hidden" overflowY="auto">
+        <Box h="full" overflow="hidden" overflowY="auto" bg="gray.100">
           <Routes>
             <Route index element={<Home />} />
             <Route path="*" element={<NotFound />} />
