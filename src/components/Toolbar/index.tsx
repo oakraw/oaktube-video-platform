@@ -3,7 +3,6 @@ import {
   Image,
   Flex,
   Container,
-  Link,
   Heading,
   LinkBox,
   LinkOverlay,

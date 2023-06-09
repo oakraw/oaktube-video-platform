@@ -8,21 +8,15 @@ import {
   Flex,
   Heading,
   HStack,
-  Image,
-  Link,
-  SimpleGrid,
-  Spacer,
   Text,
   VStack,
 } from "@chakra-ui/react";
 import React, { useEffect } from "react";
-import { useLocation, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import ReactPlayer from "react-player";
-import CoverImage from "../../assets/images/cover.jpg";
-import ProfileImage from "../../assets/images/profile.jpeg";
 import VideoThumbnail from "../../components/VideoThumbnail";
 import { useFetchVideoById, useFetchVideos } from "../../hooks/useFetchVideo";
-import { insertCommas, shortenNumber } from "../../utils/number";
+import { insertCommas } from "../../utils/number";
 
 const Home: React.FC = () => {
   const { id } = useParams();

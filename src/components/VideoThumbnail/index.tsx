@@ -1,5 +1,4 @@
 import {
-  Box,
   Image,
   Flex,
   Text,
@@ -7,8 +6,6 @@ import {
   ChakraProps,
   HStack,
   Avatar,
-  Link,
-  VStack,
   LinkOverlay,
   LinkBox,
 } from "@chakra-ui/react";

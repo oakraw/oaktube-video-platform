@@ -1,20 +1,9 @@
 import {
-  AspectRatio,
-  Avatar,
   Box,
-  Card,
   Container,
-  Flex,
-  Heading,
-  HStack,
-  Image,
-  Link,
   SimpleGrid,
-  Text,
 } from "@chakra-ui/react";
-import React, { useEffect } from "react";
-import CoverImage from "../../assets/images/cover.jpg";
-import ProfileImage from "../../assets/images/profile.jpeg";
+import React from "react";
 import VideoThumbnail from "../../components/VideoThumbnail";
 import { useFetchVideos } from "../../hooks/useFetchVideo";
 
