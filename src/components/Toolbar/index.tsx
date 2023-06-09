@@ -1,4 +1,13 @@
-import { Box, Image, Flex, Container, Link } from "@chakra-ui/react";
+import {
+  Box,
+  Image,
+  Flex,
+  Container,
+  Link,
+  Heading,
+  LinkBox,
+  LinkOverlay,
+} from "@chakra-ui/react";
 import React from "react";
 
 const Toolbar: React.FC = () => {
@@ -12,9 +21,16 @@ const Toolbar: React.FC = () => {
             alignItems="center"
             height="full"
           >
-            <Link href="/">
-              <Image src="/logo512.png" height="56px" />
-            </Link>
+            <LinkBox>
+              <Flex direction="row" alignItems="center">
+                <LinkOverlay href="/">
+                  <Image src="/logo512.png" height="40px" />
+                </LinkOverlay>
+                <Heading color="black" size="lg" ml={3}>
+                  Oaktube
+                </Heading>
+              </Flex>
+            </LinkBox>
           </Flex>
         </Container>
       </Box>

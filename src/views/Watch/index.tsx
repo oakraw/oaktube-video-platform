@@ -17,6 +17,7 @@ import {
 } from "@chakra-ui/react";
 import React, { useEffect } from "react";
 import { useLocation, useParams } from "react-router-dom";
+import ReactPlayer from "react-player";
 import CoverImage from "../../assets/images/cover.jpg";
 import ProfileImage from "../../assets/images/profile.jpeg";
 import VideoThumbnail from "../../components/VideoThumbnail";
@@ -41,10 +42,13 @@ const Home: React.FC = () => {
             {video && (
               <>
                 <AspectRatio ratio={16 / 9}>
-                  <Image
-                    objectFit="cover"
-                    src={video.thumbnailUrl}
-                    borderRadius={16}
+                  <ReactPlayer
+                    playing
+                    controls
+                    width="100%"
+                    height="100%"
+                    muted
+                    url={video.videoUrl}
                   />
                 </AspectRatio>
                 <Text
@@ -70,7 +74,11 @@ const Home: React.FC = () => {
                       size={{ base: "sm", md: "md" }}
                       src={video.author.imageUrl}
                     />
-                    <Text fontSize={{ base: "md", md: "lg" }} color="gray.800">
+                    <Text
+                      fontSize={{ base: "md", md: "lg" }}
+                      color="gray.800"
+                      fontWeight={500}
+                    >
                       {video.author.name}
                     </Text>
                   </HStack>
@@ -87,7 +95,9 @@ const Home: React.FC = () => {
             </Heading>
             <VStack spacing={4} mb={6}>
               {videos &&
-                videos.map((v, index) => <VideoThumbnail video={v} key={index} />)}
+                videos.map((v, index) => (
+                  <VideoThumbnail video={v} key={index} />
+                ))}
             </VStack>
           </Box>
         </Flex>
