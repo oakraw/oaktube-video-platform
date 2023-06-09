@@ -12,8 +12,9 @@ import {
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { ColorModeSwitcher } from "./ColorModeSwitcher";
 import { Logo } from "./Logo";
-import NotFound from "./views/NotFound";
+import Watch from "./views/Watch";
 import Home from "./views/Home";
+import NotFound from "./views/NotFound";
 import Toolbar from "./components/Toolbar";
 import theme from "./theme";
 
@@ -25,6 +26,7 @@ export const App = () => (
         <Box h="full" overflow="hidden" overflowY="auto" bg="gray.100">
           <Routes>
             <Route index element={<Home />} />
+            <Route  path="watch/:id" element={<Watch />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Box>

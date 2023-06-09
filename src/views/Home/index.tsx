@@ -23,9 +23,9 @@ const Home: React.FC = () => {
 
   return (
     <Box height="full" overflowY="auto">
-      <Container maxW="container.lg">
+      <Container maxW="container.xl">
         <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} mt={4} spacing={8}>
-          {videos && videos.map((video) => <VideoThumbnail video={video} />)}
+          {videos && videos.map((video, index) => <VideoThumbnail video={video} key={index}/>)}
         </SimpleGrid>
       </Container>
     </Box>

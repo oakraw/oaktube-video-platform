@@ -22,7 +22,7 @@ interface Props extends ChakraProps {
 const VideoThumbnail: React.FC<Props> = ({ video }) => {
   return (
     <>
-      <Link as={RouterLink} to={`/watch/${video.id}`}>
+      <Link as={RouterLink} to={`/watch/${video.id}`} reloadDocument width="100%">
         <Flex direction="column">
           <AspectRatio boxSize="100%" ratio={16 / 9}>
             <Image
@@ -37,7 +37,7 @@ const VideoThumbnail: React.FC<Props> = ({ video }) => {
               src={video.author.imageUrl}
             />
             <Flex direction="column">
-              <Text fontSize={{ base: "md", md: "lg" }} color="black">
+              <Text fontSize={{ base: "md", md: "lg" }} color="black" fontWeight={500}>
                 {video.title}
               </Text>
               <Text fontSize={{ base: "sm", md: "md" }} color="gray.500">
